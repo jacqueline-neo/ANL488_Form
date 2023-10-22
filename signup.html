@@ -120,12 +120,32 @@
                                     <div class="valid-feedback mv-up">You selected your smoking status!</div>
                                     <div class="invalid-feedback mv-up">Please select if you smoke!</div>
                                 </div>
+                                <!-- CKD Question -->
+                                <div class="col-md-12 mt-3">
+                                    <label for="ckdQuestion">Are you a victim of CKD?</label>
+                                    <input type="radio" class="btn-check" name="ckdQuestion" id="ckdYes" value="yes"
+                                        required>
+                                    <label class="btn btn-sm btn-outline-secondary" for="ckdYes">Yes</label>
+                                    <input type="radio" class="btn-check" name="ckdQuestion" id="ckdNo" value="no"
+                                        required>
+                                    <label class="btn btn-sm btn-outline-secondary" for="ckdNo">No</label>
+                                </div>
                                 <!-- Diagnosis Category input -->
                                 <div class="col-md-12 mt-3">
                                     <input class="form-control" type="text" name="diagnosis_category"
-                                        placeholder="Diagnosis Category" required>
+                                        placeholder="Diagnosis Category if No put NA" required>
                                     <div class="valid-feedback">Diagnosis Category field is valid!</div>
                                     <div class="invalid-feedback">Diagnosis Category field cannot be blank!</div>
+                                </div>
+                                <!-- Second section: Treatment Category (Initially hidden) -->
+                                <div class="form-items" style="display: none;" id="treatmentCategorySection">
+                                    <!-- Treatment Category input -->
+                                    <div class="col-md-12 mt-3">
+                                        <input class="form-control" type="text" name="treatment_category"
+                                            placeholder="Treatment Category" required>
+                                        <div class="valid-feedback">Treatment Category field is valid!</div>
+                                        <div class="invalid-feedback">Treatment Category field cannot be blank!</div>
+                                    </div>
                                 </div>
                                 <!-- Declare Check-->
                                 <div class="form-check">
@@ -171,7 +191,7 @@
 
             $.getScript('js/myScript.js');
 
-        });
+        })
     </script>
 
 </body>
