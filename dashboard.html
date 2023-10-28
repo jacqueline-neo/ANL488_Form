@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>ECA</title>
+    <!-- Font Awesome icons-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Tensor Flow JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Google fonts-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" type="text/css" />
+    <!--Main CSS-->
+    <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
+    <link rel="stylesheet" href="css/animate.css/animate.min.css">
+    <!-- <script src="jquery.js"></script> -->
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <div id="navbar"></div>
+    <!-- showhead-->
+    <header class="signuphead" id="signuphead">
+        <div class="container">
+            <div class="signuphead-subheading animate__animated animate__fadeInDown">Dashboard</div>
+        </div>
+    </header>
+    <!-- Breadcrumb-->
+    <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>Dashboard</li>
+    </ul>
+ 
+    <!-- Footer-->
+    <div id="footer"></div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS and jQuery libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-oxe8XNvuAfC5V5XdCXszB/CpPVI8rLI5rEgxh1+11QFQ8M8lP5g28JNcPM1a26U7"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js"
+        integrity="sha512-sKPkw2i+pgmzczwBE+hpWXWJtlSkLaGZdwwfJvA8RiYDGrkALp+ivsTnhLTqez/KTSP6ipFQxGZ0gz1zF6aaYg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Core theme JS-->
+    <script src="js/myScript.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/model.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#navbar").load("common/navbar.html");
+            $("#footer").load("common/footer.html");
+
+            $.getScript('js/myScript.js');
+
+        })
+    </script>
+
+</body>
+
+</html>
