@@ -29,11 +29,18 @@ form.addEventListener('submit', function (event) {
     successMessage += 'Hypertension: ' + hypertension + ',\n';
     successMessage += 'Smoking: ' + smoking + ',\n';
     successMessage += 'Diagnosis Category: ' + diagnosisCategory + ',\n';
-    successMessage += 'Treatment Category: ' + treatmentCategory;
+
+    if (treatmentCategory) {
+      successMessage += 'Treatment Category: ' + treatmentCategory;
+    } else {
+      successMessage += 'Treatment Category: Not specified';
+    }
+
+    successMessage += '\nPlease refer to: <a class="nav-link" href="index.html#tips-section">Tips for CKD Management</a> for the recommended call-to-action';
 
     // Update the success modal body with the modified message
     const successModalBody = document.querySelector('.modal-body');
-    successModalBody.textContent = successMessage;
+    successModalBody.innerHTML = successMessage;
 
     // Show the success modal
     $('#success-modal').modal('show');
@@ -50,13 +57,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to show or hide sections based on the CKD question
   function toggleSections() {
-      if (ckdYesRadio.checked) {
-          treatmentCategorySection.style.display = "block";
-          diagnosisCategorySection.style.display = "none";
-      } else if (ckdNoRadio.checked) {
-          treatmentCategorySection.style.display = "none";
-          diagnosisCategorySection.style.display = "block";
-      }
+    if (ckdYesRadio.checked) {
+      treatmentCategorySection.style.display = "block";
+      diagnosisCategorySection.style.display = "none";
+    } else if (ckdNoRadio.checked) {
+      treatmentCategorySection.style.display = "none";
+      diagnosisCategorySection.style.display = "block";
+    }
   }
 
   // Initial call to set the initial state
